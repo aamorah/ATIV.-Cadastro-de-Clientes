@@ -9,7 +9,8 @@
 body {
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     /* Gradiente solicitado */
     background: linear-gradient(135deg, #87F5F5, #FFE5F1, #F042FF);
@@ -20,14 +21,24 @@ body {
 
 /* Animação para o fundo não ficar estático */
 @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 main {
-    background: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente */
-    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    background: rgba(255, 255, 255, 0.7);
+    /* Fundo semi-transparente */
+    backdrop-filter: blur(10px);
+    /* Efeito de desfoque no fundo */
     -webkit-backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 20px;
@@ -37,7 +48,14 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-h1, h2 {
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1,
+h2 {
     color: #4a4a4a;
     text-align: center;
     margin-bottom: 1.5rem;
@@ -46,7 +64,7 @@ h1, h2 {
 h2 {
     margin-top: 2rem;
     font-size: 1.2rem;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 1rem;
 }
 
