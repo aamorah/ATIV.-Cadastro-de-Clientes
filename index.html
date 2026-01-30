@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cadastro de Clientes</h1>
+    </header>
+    <main>
+        <form id="client-form">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <button type="button" id="add-client">Cadastrar</button>
+        </form>
+
+        <h2>Clientes Cadastrados</h2>
+        <ul id="client-list">
+            <!-- Lista de clientes será carregada aqui -->
+        </ul>
+    </main>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

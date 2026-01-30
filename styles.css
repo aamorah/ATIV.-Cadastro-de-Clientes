@@ -1,0 +1,115 @@
+/* Configuração Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Gradiente solicitado */
+    background: linear-gradient(135deg, #87F5F5, #FFE5F1, #F042FF);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    padding: 20px;
+}
+
+/* Animação para o fundo não ficar estático */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+main {
+    background: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1, h2 {
+    color: #4a4a4a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 1rem;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(240, 66, 255, 0.2);
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #F042FF;
+    box-shadow: 0 0 8px rgba(240, 66, 255, 0.2);
+}
+
+/* Botão */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #F042FF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: #d039db;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Lista de Clientes */
+#client-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#client-list li {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #444;
+    border-left: 4px solid #87F5F5;
+}
